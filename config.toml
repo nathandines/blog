@@ -1,0 +1,10 @@
+baseURL = "https://blog.nathandines.com/"
+languageCode = "en"
+title = "nathandines_blog"
+theme = "tale"
+
+[Author]
+    name = "Nathan Dines"
+
+[Params]
+    author = "Nathan Dines"
