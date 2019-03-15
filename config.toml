@@ -2,6 +2,7 @@ baseURL = "https://blog.nathandines.com/"
 languageCode = "en"
 title = "nathandines_blog"
 theme = "tale"
+googleAnalytics = "UA-136326060-1"
 
 [Author]
     name = "Nathan Dines"
