@@ -2,3 +2,9 @@
     command = "hugo"
     publish = "public"
     environment = { HUGO_VERSION = "0.54.0" }
+
+[[redirects]]
+    from = "https://blog-nathandines-com.netlify.com/*"
+    to = "https://blog.nathandines.com/:splat"
+    status = 301
+    force = true
