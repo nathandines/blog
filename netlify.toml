@@ -1,7 +1,9 @@
 [build]
     command = "hugo"
     publish = "public"
-    environment = { HUGO_VERSION = "0.54.0" }
+
+[build.environment]
+    HUGO_VERSION = '0.54.0'
 
 [[redirects]]
     from = "https://blog-nathandines-com.netlify.com/*"
