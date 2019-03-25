@@ -3,6 +3,8 @@ languageCode = "en"
 title = "nathandines_blog"
 theme = "tale"
 googleAnalytics = "UA-136326060-1"
+pygmentsCodefences = true
+pygmentsStyle = 'emacs'
 
 [Author]
     name = "Nathan Dines"
