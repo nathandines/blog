@@ -11,3 +11,4 @@ pygmentsStyle = 'emacs'
 
 [Params]
     author = "Nathan Dines"
+    windowTitle = "Nathan Dines Blog"

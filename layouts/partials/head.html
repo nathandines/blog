@@ -10,9 +10,9 @@
 
   <title>
     {{- if eq .URL "/" }}
-    {{ .Site.Title }}
+    {{ .Site.Params.windowTitle }}
     {{- else }}
-    {{ .Title }} &middot; {{ .Site.Title }}
+    {{ .Title }} &middot; {{ .Site.Params.windowTitle }}
     {{- end }}
   </title>
 
