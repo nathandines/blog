@@ -13,3 +13,7 @@ pygmentsStyle = 'emacs'
     author = "Nathan Dines"
     windowTitle = "Nathan Dines Blog"
     description = "A place where I write about things I've been doing or am interested in. Follow along if you like."
+
+[Params.twitter]
+    accountID = "168889338"
+    username = "@nathan_dines"

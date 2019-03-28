@@ -3,21 +3,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="twitter:account_id" content="168889338" />
+  <meta property="twitter:account_id" content="{{ .Site.Params.twitter.accountId }}" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@nathan_dines" />
-  <meta name="twitter:creator" content="@nathan_dines" />
+  <meta name="twitter:site" content="{{ .Site.Params.twitter.username }}" />
+  <meta name="twitter:creator" content="{{ .Site.Params.twitter.username }}" />
   <meta name="twitter:image" content="{{ "img/share.png" | absURL }}" />
-  <meta name="twitter:domain" content="blog.nathandines.com" />
+  {{- $urlInfo := urls.Parse .Site.BaseURL }}
+  <meta name="twitter:domain" content="{{ $urlInfo.Host }}" />
 
   {{- if eq .URL "/" }}
-  <meta name="description" content="{{ .Site.Params.Description }}">
-  <meta name="twitter:description" content="{{ .Site.Params.Description }}">
   <meta name="twitter:title" content="{{ .Site.Params.windowTitle }}">
-  {{- else if .Description }}
-  <meta name="description" content="{{ .Description }}">
-  <meta name="twitter:description" content="{{ .Description }}">
+  <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  {{- else }}
   <meta name="twitter:title" content="{{ .Title }} &middot; {{ .Site.Params.windowTitle }}">
+  {{- if .Description }}
+  <meta name="twitter:description" content="{{ .Description }}">
+  <meta name="description" content="{{ .Description }}">
+  {{- end }}
   {{- end }}
 
   <title>
