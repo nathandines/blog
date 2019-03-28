@@ -2,6 +2,7 @@
 title: "Handling Secrets the Right Way"
 date: 2019-03-29T08:28:28+11:00
 draft: false
+description: Exploring responsible secrets handling, and some limitations of alternative approaches
 ---
 
 One thing which I often get asked by clients is "How do you handle secrets
