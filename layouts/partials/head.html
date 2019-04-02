@@ -3,23 +3,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="twitter:account_id" content="{{ .Site.Params.twitter.accountId }}" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="{{ .Site.Params.twitter.username }}" />
-  <meta name="twitter:creator" content="{{ .Site.Params.twitter.username }}" />
-  <meta name="twitter:image" content="{{ "img/share.png" | absURL }}" />
-  {{- $urlInfo := urls.Parse .Site.BaseURL }}
-  <meta name="twitter:domain" content="{{ $urlInfo.Host }}" />
+  {{ $urlInfo := urls.Parse .Site.BaseURL -}}
+  <meta property="og:image"            content="{{ "img/share.png" | absURL }}" />
+  <meta property="og:url"              content="{{ .RelPermalink | absURL }}" />
+  <meta property="twitter:card"        content="summary" />
+  <meta property="twitter:creator"     content="{{ .Site.Params.twitter.username }}" />
+  <meta property="twitter:domain"      content="{{ $urlInfo.Host }}" />
+  <meta property="twitter:image"       content="{{ "img/share.png" | absURL }}" />
+  <meta property="twitter:site"        content="{{ .Site.Params.twitter.username }}" />
+  <meta property="twitter:site:id"     content="{{ .Site.Params.twitter.accountId }}" />
 
   {{- if eq .URL "/" }}
-  <meta name="twitter:title" content="{{ .Site.Params.windowTitle }}">
-  <meta name="twitter:description" content="{{ .Site.Params.Description }}">
-  <meta name="description" content="{{ .Site.Params.Description }}">
+  <meta property="description"         content="{{ .Site.Params.Description }}" />
+  <meta property="og:description"      content="{{ .Site.Params.Description }}" />
+  <meta property="og:title"            content="{{ .Site.Params.windowTitle }}" />
+  <meta property="og:type"             content="website" />
+  <meta property="twitter:description" content="{{ .Site.Params.Description }}" />
+  <meta property="twitter:title"       content="{{ .Site.Params.windowTitle }}" />
   {{- else }}
-  <meta name="twitter:title" content="{{ .Title }} &middot; {{ .Site.Params.windowTitle }}">
+  <meta property="og:type"             content="article" />
+  <meta property="og:title"            content="{{ .Title }} &middot; {{ .Site.Params.windowTitle }}" />
+  <meta property="twitter:title"       content="{{ .Title }} &middot; {{ .Site.Params.windowTitle }}" />
   {{- if .Description }}
-  <meta name="twitter:description" content="{{ .Description }}">
-  <meta name="description" content="{{ .Description }}">
+  <meta property="description"         content="{{ .Description }}" />
+  <meta property="og:description"      content="{{ .Description }}" />
+  <meta property="twitter:description" content="{{ .Description }}" />
   {{- end }}
   {{- end }}
 
