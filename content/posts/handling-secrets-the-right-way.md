@@ -243,10 +243,10 @@ Why this is a bad idea:
 
 ## Bake the secret into your machine images (e.g. AMIs)
 
-Essentially, this is a combination of the above two approaches. Changing a secret
-would require a rebuild of the AMI (which may have the secret defined in the
-code, if it's not coming from the deployment environment), and a redeploy of the
-infrastructure. Not trivial, and comes with a whole heap of risk.
+Essentially, this is a combination of the above two approaches. Changing a
+secret would require a rebuild of the AMI (which may have the secret defined in
+the code, if it's not coming from the deployment environment), and a redeploy of
+the infrastructure. Not trivial, and comes with a whole heap of risk.
 
 # In closing...
 
