@@ -9,7 +9,7 @@ So I feel like this blog post needs to happen… it's 2019, yet I've found that
 there are far too many people who either a) don't see the value in immutability;
 b) don't understand what immutability means; or c) feel that introducing
 immutability slows the development process down. We're going to address all of
-these points, and run through why developing immutable artefact can help you
+these points, and run through why developing immutable artefacts can help you
 move fast without fear of breaking things.
 
 An immutable artefact is a resource which you can deploy into an environment
