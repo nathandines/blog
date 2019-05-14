@@ -1,6 +1,7 @@
 ---
 title: "Continuous Improvement of the Mind"
 date: 2019-05-15T07:52:04+10:00
+description: A personal view on increasing knowledge in your field of interest
 categories: [Education]
 tags: [books, education, career-growth]
 ---
